@@ -9,7 +9,7 @@ const Terkini =  () => {
     return (
         <Box>
             <RubrikTitle title="TERKINI" />
-            <HStack divider={<StackDivider orientation="horizontal" borderColor="gray.200" />}>
+            <Grid templateColumns={{sm: "auto", md:"repeat(4, 1fr)"}} divider={<Divider orientation="horizontal" borderColor="gray.200" />}>
                 {
                     data?.data?.map((list, index) => (
                         <Box key={index}>
@@ -17,7 +17,7 @@ const Terkini =  () => {
                         </Box>
                     ))
                 }
-            </HStack>
+            </Grid>
         </Box>
     )
 }
