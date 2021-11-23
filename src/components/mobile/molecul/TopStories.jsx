@@ -21,7 +21,7 @@ const TopStories = memo(() => {
     };
 
     const loader = (data, url) => {
-        return `https://valid-redesign.vercel.app/_next/image?${url}&w=${data.width}&q=${data.quality || 3}`
+        return `/_next/image?${url}&w=${data.width}&q=${data.quality || 3}`
     }
     
     return (
