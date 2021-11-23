@@ -41,7 +41,7 @@ const TopStories = memo(() => {
                                 <Image 
                                     placeholder="blur"
                                     blurDataURL
-                                    // loader={data => loader(data, list.main_photo)}
+                                    loader={() => list.main_photo}
                                     src={list.main_photo} 
                                     alt={list.title} 
                                     index={index} 
