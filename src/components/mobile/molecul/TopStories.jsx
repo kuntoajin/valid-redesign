@@ -19,6 +19,10 @@ const TopStories = memo(() => {
         autoplay: true,
         autoplaySpeed: 2000,
     };
+
+    const loader = (data, url) => {
+        return `${url}?w=${data.width}&q=${data.quality || 5}`
+    }
     
     return (
         <Box>
@@ -37,6 +41,7 @@ const TopStories = memo(() => {
                                 <Image 
                                     placeholder="blur"
                                     blurDataURL
+                                    loader={(data) => loader(data, list.main_photo)}
                                     src={list.main_photo} 
                                     alt={list.title} 
                                     index={index} 
