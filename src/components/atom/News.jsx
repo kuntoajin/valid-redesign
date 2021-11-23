@@ -19,7 +19,7 @@ export const NewsTerkiniHome = memo(({data}) => {
                         height={75}
                         quality={5}
                         priority
-                        loading="eager"
+                        loading="lazy"
                     />
                 </Skeleton>
             </Box>
