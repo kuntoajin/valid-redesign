@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Box, VStack, StackDivider, HStack, Center, Link, Heading } from "@chakra-ui/react"
+import { Box, VStack, StackDivider, HStack, Center, Link, Heading, Flex } from "@chakra-ui/react"
 
 const date = new Date()
 
@@ -12,11 +12,7 @@ const Footer = () => {
                     align="stretch"
                 >
                     <Center>
-                        <HStack 
-                            spacing="24px"                    
-                            divider={<StackDivider borderColor="gray.200" />}
-                            spacing={4}
-                        >
+                        <Box display={{sm: "grid", md: "flex"}}>
                             <Link href="/" color="white">
                                 <Heading as="p" size="xs">
                                     Tentang kami
@@ -47,7 +43,7 @@ const Footer = () => {
                                     Kontak
                                 </Heading>
                             </Link>
-                        </HStack>
+                        </Box>
                     </Center>
                     <Center>
                         <HStack>

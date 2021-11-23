@@ -9,17 +9,18 @@ const myLoader = ({ src, width, quality }) => {
 
 export const NewsTerkiniHome = memo(({data}) => {
     return (
-        <Grid templateColumns={{md: "1fr 3fr", sm: "auto"}} mb="10px">
+        <Grid templateColumns="1fr 3fr" mb="10px">
             <Box mr="5px">
                 <Skeleton isLoaded>
                     <Image 
+                        // loader={myLoader}
                         src={data?.main_photo}
                         alt={data?.title}
-                        width={125}
-                        height={75}
+                        width={500}
+                        height={300}
+                        layout="responsive"
                         quality={5}
                         priority
-                        loading="lazy"
                     />
                 </Skeleton>
             </Box>
