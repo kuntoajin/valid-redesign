@@ -20,8 +20,8 @@ const TopStories = memo(() => {
         autoplaySpeed: 2000,
     };
 
-    const loader = ({src, width, quality}) => {
-        return `https://valid-redesign.vercel.app/_next/image?url=${src}?w=${width}&q=${quality || 3}`
+    const loader = (data, url) => {
+        return `/_next/image?url=${url}&w=${data.width}&q=${data.quality || 3}`
     }
     
     return (
@@ -41,7 +41,7 @@ const TopStories = memo(() => {
                                 <Image 
                                     placeholder="blur"
                                     blurDataURL
-                                    // loader={loader}
+                                    loader={data => loader(data, list.main_photo)}
                                     src={list.main_photo} 
                                     alt={list.title} 
                                     index={index} 
@@ -49,7 +49,7 @@ const TopStories = memo(() => {
                                     width={496} 
                                     priority 
                                     quality={3} 
-                                    layout="responsive"
+                                    // layout="responsive"
                                 />
                                 <Text fontSize="xs" dangerouslySetInnerHTML={{__html: list.caption_photo}} />
                             </Box>
