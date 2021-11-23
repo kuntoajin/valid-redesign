@@ -21,7 +21,7 @@ const TopStories = memo(() => {
     };
 
     const loader = (data, url) => {
-        return `/_next/image?url=${url}&w=${data.width}&q=${data.quality || 3}`
+        return `https://valid-redesign.vercel.app/_next/image?${url}&w=${data.width}&q=${data.quality || 3}`
     }
     
     return (
@@ -41,7 +41,7 @@ const TopStories = memo(() => {
                                 <Image 
                                     placeholder="blur"
                                     blurDataURL
-                                    loader={data => loader(data, list.main_photo)}
+                                    // loader={data => loader(data, list.main_photo)}
                                     src={list.main_photo} 
                                     alt={list.title} 
                                     index={index} 
