@@ -12,10 +12,12 @@ const OtherStories = memo(({data}) => {
                     data?.map((list, index) => (
                         <Grid alignItems="flex-start" justifyContent="start" key={index}>
                             <Image 
+                                placeholder="blur"
+                                blurDataURL
                                 src={list.main_photo}
                                 alt={list.title}
                                 priority
-                                quality={3}
+                                quality={5}
                                 width="350px"
                                 height="210px"
                             />

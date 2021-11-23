@@ -13,6 +13,8 @@ const Infografis = memo(() => {
             {
                 data?.data?.largeYard &&
                 <Image
+                    placeholder="blur"
+                    blurDataURL
                     src={data?.data?.largeYard?.image}
                     alt={data?.data?.largeYard?.title}
                     width="240"

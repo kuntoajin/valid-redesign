@@ -15,10 +15,13 @@ const Tajuk = memo(() => {
                 {
                     avatar &&
                     <Image 
+                        placeholder="blur"
+                        blurDataURL
                         src={avatar}
                         alt={data?.data?.profile?.fullname}
                         width={120}
                         height={120}
+                        quality={5}
                         priority
                     />
                 }

@@ -34,7 +34,17 @@ const TopStories = memo(() => {
                                 </HStack>
                                 <Text as="h2" fontSize="3xl" isTruncated dangerouslySetInnerHTML={{__html: list.title}} />
                                 <Text dangerouslySetInnerHTML={{__html: list.lower_title}} my="10px" fontWeight="500" />
-                                <Image src={list.main_photo} alt={list.title} index={index} height={297} width={496} priority quality={3} />
+                                <Image 
+                                    placeholder="blur"
+                                    blurDataURL
+                                    src={list.main_photo} 
+                                    alt={list.title} 
+                                    index={index} 
+                                    height={297} 
+                                    width={496} 
+                                    priority 
+                                    quality={3} 
+                                />
                                 <Text fontSize="xs" dangerouslySetInnerHTML={{__html: list.caption_photo}} />
                             </Box>
                         </Box>

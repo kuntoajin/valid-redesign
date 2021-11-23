@@ -15,10 +15,13 @@ const CatatanValid = memo(() => {
                 {
                     photo &&
                     <Image 
+                        placeholder="blur"
+                        blurDataURL
                         src={data?.data?.main_photo}
                         alt={data?.data?.title}
                         width={240}
                         height={144}
+                        quality={5}
                         priority
                     />
                 }
