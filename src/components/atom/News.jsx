@@ -3,16 +3,23 @@ import Image from 'next/image'
 import { Box, Text, HStack, StackDivider, Link, Skeleton, VStack, Grid } from "@chakra-ui/react";
 import RubrikTitle from "./RubrikTitle";
 
+const myLoader = ({ src, width, quality }) => {
+    return `https://example.com/${src}?w=${width}&q=${quality || 75}`
+}
+
 export const NewsTerkiniHome = memo(({data}) => {
     return (
         <Grid templateColumns="1fr 3fr" mb="10px">
             <Box mr="5px">
                 <Skeleton isLoaded>
                     <Image 
+                        placeholder="blur"
+                        blurDataURL
                         src={data?.main_photo}
                         alt={data?.title}
                         width={125}
                         height={75}
+                        quality={5}
                         priority
                     />
                 </Skeleton>
