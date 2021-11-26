@@ -1,5 +1,4 @@
 import Head from "next/head";
-import HomeMobile from "../src/components/mobile/pages/home";
 import Home from "../src/components/pages/home";
 
 const Index = () => {
@@ -13,7 +12,6 @@ const Index = () => {
         />
       </Head>
       <Home />
-      {/* <HomeMobile /> */}
     </>
   );
 };
