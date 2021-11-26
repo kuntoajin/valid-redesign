@@ -4,7 +4,6 @@ import { Box, Container, Text, HStack, StackDivider } from "@chakra-ui/react"
 import RubrikTitle from "../../atom/RubrikTitle"
 
 const DetailComponents = ({ data }) => {
-    console.log(data?.data)
     return (
         <Container maxW="container.lg">
             <Head>
