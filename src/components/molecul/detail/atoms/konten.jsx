@@ -3,7 +3,7 @@ import { memo } from "react";
 
 const Konten = memo(({data}) => {
     return (
-        <Box dangerouslySetInnerHTML={{__html: data?.data?.content}}/>
+        <Box className="konten" dangerouslySetInnerHTML={{__html: data?.data?.content}}/>
     )
 })
 

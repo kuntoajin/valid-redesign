@@ -30,6 +30,10 @@ const GlobalStyles = css`
    h2 {
     font-weight: 700
    }
+   .konten > p {
+     margin: 20px 0;
+     font-size: 18px;
+   }
 `;
 
 function MyApp({ Component, pageProps }) {

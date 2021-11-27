@@ -15,18 +15,18 @@ const LeftContent = memo(({data}) => {
                 <Text fontFamily="Montserrat" fontSize="sm">{data?.data?.time}</Text>
             </HStack>
             <Text as="h1" dangerouslySetInnerHTML={{__html: data?.data?.title}} fontSize="25" fontWeight="700" />
-            <Text as="h2" dangerouslySetInnerHTML={{__html: data?.data?.lower_title}} />
-            <Box>
-                {data?.data?.list_reporter.length <= 0 ? null : <Text as="p" fontSize="xs" fontFamily="Montserrat">Penulis: {data?.data?.list_reporter.map((list, index) => {
+            <Text as="h2" fontWeight="500" dangerouslySetInnerHTML={{__html: data?.data?.lower_title}} />
+            <Box my={2}>
+                {data?.data?.list_reporter.length <= 0 ? null : <Text as="p" fontSize="xs" fontWeight="600" fontFamily="Montserrat">Penulis: {data?.data?.list_reporter.map((list, index) => {
                     return (
                         list.type === 1 ? <a className='penulis' href={`${list.type === 1 ? `/reporter/${list.id}` : '' }`} key={index}>{list.name}, </a> : 
                         <small className='penulis' key={index}>{list.name}, </small>
                     )
                 })}</Text>}
-                <Text as="p" fontSize="xs" fontFamily="Montserrat">Editor: {data?.data?.editor}</Text>
+                <Text as="p" fontWeight="600" fontSize="xs" fontFamily="Montserrat">Editor: {data?.data?.editor}</Text>
             </Box>
             <ImageComponent data={data} />
-            <Text dangerouslySetInnerHTML={{__html: data?.data?.caption_photo}}/>
+            <Text as="em" fontSize="xs" dangerouslySetInnerHTML={{__html: data?.data?.caption_photo}}/>
             <Konten data={data} />
         </Box>
     )
