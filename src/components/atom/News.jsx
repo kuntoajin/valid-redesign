@@ -1,11 +1,6 @@
 import { memo } from "react";
 import Image from 'next/image'
-import { Box, Text, HStack, StackDivider, Link, Skeleton, VStack, Grid } from "@chakra-ui/react";
-import RubrikTitle from "./RubrikTitle";
-
-const myLoader = ({ src, width, quality }) => {
-    return `https://example.com/${src}?w=${width}&q=${quality || 75}`
-}
+import { Box, Text, Link, Skeleton, Grid } from "@chakra-ui/react";
 
 export const NewsTerkiniHome = memo(({data}) => {
     return (
@@ -13,13 +8,13 @@ export const NewsTerkiniHome = memo(({data}) => {
             <Box mr="5px">
                 <Skeleton isLoaded>
                     <Image 
-                        // loader={myLoader}
+                        placeholder="blur"
+                        blurDataURL
                         src={data?.main_photo}
                         alt={data?.title}
-                        width={500}
-                        height={300}
-                        layout="responsive"
-                        quality={5}
+                        width={100}
+                        height={60}
+                        quality={3}
                         priority
                     />
                 </Skeleton>
