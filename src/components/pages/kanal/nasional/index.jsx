@@ -1,11 +1,13 @@
 import { Container, Divider, Box, Grid, Center } from "@chakra-ui/react";
 import { memo } from "react";
-import Showcase from "../../../molecul/kanal/Showcase";
 import Seo from "../utils/seo";
 import { apiGet } from "../../../../utils/api";
-import OtherStories from "../../../molecul/kanal/OtherStories";
-import SubKanal from "../../../molecul/kanal/SubKanal";
 import RubrikTitle from "../../../atom/RubrikTitle";
+import dynamic from "next/dynamic";
+
+const Showcase = dynamic(() => import("../../../molecul/kanal/Showcase"))
+const OtherStories = dynamic(() => import("../../../molecul/kanal/OtherStories"))
+const SubKanal = dynamic(() => import("../../../molecul/kanal/SubKanal"))
 
 const NasionalKanal = memo(() => {
     const data = apiGet('/api/portal/category/nasional')
