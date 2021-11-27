@@ -5,7 +5,7 @@ import dynamic from 'next/dynamic'
 const LeftContent = dynamic(() => import('../../molecul/detail/molecules/LeftContent'))
 const RightContent = dynamic(() => import('../../molecul/detail/molecules/RightContent'))
 
-const DetailComponents = ({ data, infografis }) => {
+const DetailComponents = ({ data, infografis, terpopuler }) => {
     return (
         <Container maxW="container.lg">
             <Seo
@@ -18,7 +18,7 @@ const DetailComponents = ({ data, infografis }) => {
                 <Center>
                     <Divider orientation="vertical" />
                 </Center>
-                <RightContent data={infografis} />
+                <RightContent data={{infografis, terpopuler}} />
             </Grid>
         </Container>
     )
