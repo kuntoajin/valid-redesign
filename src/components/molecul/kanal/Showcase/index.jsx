@@ -6,17 +6,17 @@ const ImageComponent = dynamic(() => import('./atoms/image'))
 const InfoComponent = dynamic(() => import('./atoms/info'))
 const TerpopulerTerkini = dynamic(() => import('./atoms/terpopuler'))
 
-const Showcase = memo(({data, title}) => {
+const Showcase = memo(({data, populer, title}) => {
     return (
         <Box>
             <Grid templateColumns="3fr 20px 1fr">
                 <Grid templateColumns="1fr 2fr">
-                    <InfoComponent data={data?.last_ekonomi} title={title} />
-                    <ImageComponent data={data?.last_ekonomi} />
+                    <InfoComponent data={data} title={title} />
+                    <ImageComponent data={data} />
                 </Grid>
                 <Divider orientation="vertical" />
                 <Box>
-                    <TerpopulerTerkini data={data?.populer} />
+                    <TerpopulerTerkini data={populer} />
                 </Box>
             </Grid>
         </Box>

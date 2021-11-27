@@ -9,7 +9,6 @@ const Slider = dynamic(() => import('react-slick'))
 
 const TerkiniMobile = memo(() => {
     const data = apiGet('api/portal/home/terkini')
-    console.log(data)
     const settings = {
         dots: true,
         arrows: false,

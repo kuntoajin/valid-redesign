@@ -15,10 +15,11 @@ const MenuDrawer = memo(() => {
                         <a>Nasional</a>
                     </Link>
                 </MenuItem>
-                <MenuItem _hover={{ bg: "unset" }}>Create a Copy</MenuItem>
-                <MenuItem _hover={{ bg: "unset" }}>Mark as Draft</MenuItem>
-                <MenuItem _hover={{ bg: "unset" }}>Delete</MenuItem>
-                <MenuItem _hover={{ bg: "unset" }}>Attend a Workshop</MenuItem>
+                <MenuItem _hover={{ bg: "unset" }} _focus={{ bg: "unset" }}>
+                    <Link href="/ekonomi">
+                        <a>Ekonomi</a>
+                    </Link>
+                </MenuItem>
             </MenuList>
         </Menu>
     )

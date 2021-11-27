@@ -14,9 +14,9 @@ const EkonomiKanal = memo(() => {
                 title="Berita Ekonomi Indonesia Terbaru | Validnews.id"
                 keyword="berita ekonomi, berita bisnis terbaru, berita ekonomi terbaru, berita ekonomi terkini"
             />
-            <Showcase data={data?.data} title="Ekonomi" />
+            <Showcase data={data?.data?.last_ekonomi} populer={data?.data?.populer} title="Ekonomi" />
             <Divider />
-            <OtherStories data={data?.data} />
+            <OtherStories data={data?.data?.last_ekonomi} />
         </Container>
     )
 })
