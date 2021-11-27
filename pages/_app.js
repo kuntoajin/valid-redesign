@@ -11,8 +11,10 @@ import "@fontsource/zilla-slab/700.css"
 import "@fontsource/zilla-slab/500.css"
 import "@fontsource/zilla-slab/600.css"
 
-import "@fontsource/montserrat/600.css"
 import "@fontsource/montserrat/700.css"
+import "@fontsource/montserrat/600.css"
+import "@fontsource/montserrat/400.css"
+import "@fontsource/montserrat/500.css"
 
 import 'focus-visible/dist/focus-visible'
 
