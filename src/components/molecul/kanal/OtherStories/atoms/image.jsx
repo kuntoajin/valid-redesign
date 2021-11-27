@@ -3,22 +3,22 @@ import Image from 'next/image'
 import { Box, Text } from "@chakra-ui/react";
 
 const ImageComponent = memo(({data}) => {
+    console.log(data)
     return (
-        <Box p={5} pt={0}>
+        <Box>
             {
-                data?.largeYard && 
+                data?.main_photo && 
                 <Image 
                     placeholder="blur"
                     blurDataURL
-                    src={data?.largeYard?.main_photo}
-                    alt={data?.largeYard?.title}
+                    src={data?.main_photo}
+                    alt={data?.title}
                     priority
                     quality={3}
                     width={500}
                     height={300}
                 />
             }
-            <Text as="em" dangerouslySetInnerHTML={{__html: data?.largeYard?.caption_photo}} fontSize="xs" />
         </Box>
     )
 })
