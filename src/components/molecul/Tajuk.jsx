@@ -1,5 +1,6 @@
 import { memo } from "react";
 import Image from 'next/image'
+import Link from 'next/link'
 import { Box, Text } from "@chakra-ui/react";
 import { apiGet } from "../../utils/api";
 import RubrikTitle from "../atom/RubrikTitle";
@@ -26,9 +27,13 @@ const Tajuk = memo(() => {
                     />
                 }
             </Box>
-            <Text as="h2">
-                {data?.data?.title}
-            </Text>
+            <Link href={`${data?.data?.kanal.toLowerCase()}/${data?.data?.slug}`}>
+                <a>
+                    <Text as="h2">
+                        {data?.data?.title}
+                    </Text>
+                </a>
+            </Link>
         </Box>
     )
 })
