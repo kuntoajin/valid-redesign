@@ -1,4 +1,4 @@
-import NasionalPage from "../../src/components/pages/nasional";
+import NasionalPage from '../../src/components/pages/kanal/nasional'
 
 const Nasional = () => {
   return <NasionalPage />;
