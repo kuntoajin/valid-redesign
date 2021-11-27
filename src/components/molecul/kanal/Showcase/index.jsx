@@ -1,15 +1,24 @@
 import { memo } from "react";
 import dynamic from 'next/dynamic'
-import { Box } from "@chakra-ui/react";
+import { Box, Divider, Grid } from "@chakra-ui/react";
 
 const ImageComponent = dynamic(() => import('./atoms/image'))
 const InfoComponent = dynamic(() => import('./atoms/info'))
+const TerpopulerTerkini = dynamic(() => import('./atoms/terpopuler'))
 
 const Showcase = memo(({data}) => {
     return (
         <Box>
-            <InfoComponent data={data} />
-            <ImageComponent data={data} />
+            <Grid templateColumns="3fr 20px 1fr">
+                <Grid templateColumns="1fr 2fr">
+                    <InfoComponent data={data?.last_nasional} />
+                    <ImageComponent data={data?.last_nasional} />
+                </Grid>
+                <Divider orientation="vertical" />
+                <Box>
+                    <TerpopulerTerkini data={data?.populer} />
+                </Box>
+            </Grid>
         </Box>
     )
 })

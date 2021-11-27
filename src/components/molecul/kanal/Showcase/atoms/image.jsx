@@ -1,9 +1,10 @@
 import { memo } from "react";
 import Image from 'next/image'
+import { Box } from "@chakra-ui/react";
 
 const ImageComponent = memo(({data}) => {
     return (
-        <>
+        <Box p={5} pt={0}>
             {
                 data?.largeYard && 
                 <Image 
@@ -15,7 +16,7 @@ const ImageComponent = memo(({data}) => {
                 />
             
             }
-        </>
+        </Box>
     )
 })
 

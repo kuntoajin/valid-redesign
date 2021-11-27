@@ -1,12 +1,17 @@
 import { memo } from "react";
-import { Text, Box } from "@chakra-ui/react";
+import { Text, Box, HStack, StackDivider } from "@chakra-ui/react";
 import RubrikTitle from '../../../../atom/RubrikTitle'
 
 const InfoComponent = memo(({data}) => {
     return (
         <Box>
+            <Text as="h1" fontSize="30px" fontWeight="700" color="orange">Nasional</Text>
             <RubrikTitle title={data?.largeYard?.sub_kanal.toUpperCase()} />
-            <Text as="h2">{data?.largeYard?.title}</Text>
+            <HStack divider={<StackDivider orientation="horizontal" borderColor="gray.200" />}>
+                <Text fontFamily="Montserrat" fontSize="sm">{data?.largeYard?.date}</Text>
+                <Text fontFamily="Montserrat" fontSize="sm">{data?.largeYard?.time}</Text>
+            </HStack>
+            <Text as="h2" fontSize="25px">{data?.largeYard?.title}</Text>
             <Text as="p">{data?.largeYard?.lower_title}</Text>
         </Box>
     )

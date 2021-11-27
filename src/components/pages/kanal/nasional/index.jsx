@@ -15,7 +15,7 @@ const NasionalKanal = memo(() => {
                     title="Berita Nasional Indonesia | Validnews"
                 />
             </Head>
-            <Showcase data={data?.data?.last_nasional} />
+            <Showcase data={data?.data} />
         </Container>
     )
 })
