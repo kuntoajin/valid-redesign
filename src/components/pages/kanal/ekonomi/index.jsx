@@ -17,6 +17,7 @@ const EkonomiKanal = memo(() => {
             <Showcase data={data?.data?.last_ekonomi} populer={data?.data?.populer} title="Ekonomi" />
             <Divider />
             <OtherStories data={data?.data?.last_ekonomi} />
+            <Divider />
         </Container>
     )
 })
