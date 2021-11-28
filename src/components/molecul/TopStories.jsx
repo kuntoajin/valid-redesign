@@ -1,13 +1,12 @@
 import { memo } from "react";
-import Image from 'next/image'
 import Link from 'next/link'
-// import Slider from "react-slick";
+import dynamic from "next/dynamic";
 import { apiGet } from "../../utils/api";
 import { Box, HStack, Text, StackDivider } from "@chakra-ui/react";
-import dynamic from "next/dynamic";
 
 const RubrikTitle = dynamic(() => import('../atom/RubrikTitle'))
 const Slider = dynamic(() => import('react-slick'))
+const ImageComponent = dynamic(() => import('../atom/TopStories/image'))
 
 const TopStories = memo(() => {
     const data = apiGet('api/portal/home/topStories')
@@ -37,17 +36,7 @@ const TopStories = memo(() => {
                                         </HStack>
                                         <Text as="h2" fontSize="3xl" isTruncated dangerouslySetInnerHTML={{__html: list.title}} />
                                         <Text dangerouslySetInnerHTML={{__html: list.lower_title}} my="10px" fontWeight="500" />
-                                        <Image 
-                                            placeholder="blur"
-                                            blurDataURL
-                                            src={list.main_photo} 
-                                            alt={list.title} 
-                                            index={index} 
-                                            height={297} 
-                                            width={496} 
-                                            priority 
-                                            quality={3} 
-                                        />
+                                        <ImageComponent data={list} index={index} />
                                         <Text fontSize="xs" dangerouslySetInnerHTML={{__html: list.caption_photo}} />
                                     </Box>
                                 </a>

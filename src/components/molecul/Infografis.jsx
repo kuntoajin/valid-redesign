@@ -17,8 +17,8 @@ const Infografis = memo(() => {
                     blurDataURL
                     src={data?.data?.largeYard?.image}
                     alt={data?.data?.largeYard?.title}
-                    width="240"
-                    height="240"
+                    width={248}
+                    height={248}
                     priority
                     quality={8}
                 />
