@@ -33,7 +33,7 @@ const NewsWithChildren = memo(({title, data}) => {
                         {
                             data?.data?.list.map((list, index) => (
                                 <Link href={`${list.kanal.toLowerCase()}/${list.slug}`} key={index}>
-                                    <Grid templateColumns="1fr 2fr" gap={3}>
+                                    <Grid gap={3}>
                                         <Box flex="1">
                                             <Image 
                                                 src={list.main_photo}
