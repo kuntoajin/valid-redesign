@@ -25,8 +25,13 @@ const Home = () => {
         <Container maxW="container.lg">
             <Terkini divider={<Divider orientation="vertical" />} />
             <Divider />
-            <Grid templateColumns={{sm: "auto", md: "1fr 20px 2fr 20px 1fr" }} mt="15px">
-                <Box flex="1">
+            <Grid 
+                templateColumns={{md: "1fr 20px 2fr 20px 1fr" }} 
+                // templateRows={{sm: "1fr 1fr 1fr"}}
+                // templateAreas={{sm: ['top_stories', 'tajuk', 'catatan_valid']}}
+                mt="15px"
+            >
+                <Box>
                     <VStack divider={<StackDivider orientation="horizontal" borderColor="gray.200" />} alignItems="left">
                         <Tajuk />
                         <Infografis />
@@ -35,13 +40,13 @@ const Home = () => {
                 <Center>
                     <Divider orientation="vertical" />
                 </Center>
-                <Box overflow="hidden" flex="2">
+                <Box overflow="hidden">
                     <TopStories />
                 </Box>
                 <Center>
-                <Divider orientation="vertical" />
+                    <Divider orientation="vertical" />
                 </Center>
-                <Box flex="1">
+                <Box>
                     <VStack divider={<StackDivider orientation="horizontal" borderColor="gray.200" />} alignItems="left">
                         <CatatanValid />
                         <Terpopuler />
