@@ -4,9 +4,9 @@ import { apiGet } from "../../utils/api";
 
 const NewsWithChildren = dynamic(() => import("../atom/NewsWithChildren"))
 
-const Vista = memo(() => {
-    const data = apiGet('api/portal/home/vista')
-    return <NewsWithChildren title="VISTA" data={data} />
+const Visixty = memo(() => {
+    const data = apiGet('api/portal/home/visixty')
+    return <NewsWithChildren title="VISIXTY" data={data} />
 })
 
-export default Vista
+export default Visixty

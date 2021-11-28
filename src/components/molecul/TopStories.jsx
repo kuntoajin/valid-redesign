@@ -34,7 +34,7 @@ const TopStories = memo(() => {
                                             <Text textDecoration="unset" fontFamily="Montserrat" fontSize="sm">{list.date}</Text>
                                             <Text textDecoration="unset" fontFamily="Montserrat" fontSize="sm">{list.time}</Text>
                                         </HStack>
-                                        <Text as="h2" fontSize="3xl" isTruncated dangerouslySetInnerHTML={{__html: list.title}} />
+                                        <Text as="h2" fontSize="3xl" dangerouslySetInnerHTML={{__html: list.title}} />
                                         <Text dangerouslySetInnerHTML={{__html: list.lower_title}} my="10px" fontWeight="500" />
                                         <ImageComponent data={list} index={index} />
                                         <Text fontSize="xs" dangerouslySetInnerHTML={{__html: list.caption_photo}} />

@@ -2,10 +2,10 @@ import { memo } from "react";
 import Image from 'next/image'
 import { Box, Text, Link, Skeleton, Grid } from "@chakra-ui/react";
 
-export const NewsTerkiniHome = memo(({data}) => {
+export const NewsTerkiniHome = memo(({data, index}) => {
     return (
-        <Grid templateColumns="1fr 3fr" mb="10px">
-            <Box mr="5px">
+        <Grid templateColumns="1fr 2fr" mb="10px">
+            <Box mr="5px" pl="10px">
                 <Skeleton isLoaded>
                     <Image 
                         placeholder="blur"
@@ -20,7 +20,7 @@ export const NewsTerkiniHome = memo(({data}) => {
                 </Skeleton>
             </Box>
             <Link href={`/${data?.kanal?.toLowerCase()}/${data?.slug}`}>
-                <Text as="h2" dangerouslySetInnerHTML={{__html: data?.title}} lineHeight="15px" fontSize="13px" />
+                <Text as="h2" dangerouslySetInnerHTML={{__html: data?.title}} lineHeight="15px" fontSize="13px" noOfLines={2} />
             </Link>
         </Grid>
     )

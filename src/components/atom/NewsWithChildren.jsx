@@ -4,7 +4,7 @@ import { memo } from "react"
 import RubrikTitle from "./RubrikTitle"
 
 const NewsWithChildren = memo(({title, data}) => {
-    const photo = data?.data?.largeYard.main_photo
+    const photo = data?.data?.largeYard.main_photo ? data?.data?.largeYard.main_photo : data?.data?.largeYard.thumbnail
     return (
         <Box>
             <RubrikTitle title={title} />
@@ -24,7 +24,7 @@ const NewsWithChildren = memo(({title, data}) => {
                                 />
                             }
                         </Box>
-                        <Text as="h2" dangerouslySetInnerHTML={{__html: data?.data?.largeYard?.title}} fontSize="xl" noOfLines={[2, 3]} />
+                        <Text as="h2" dangerouslySetInnerHTML={{__html: data?.data?.largeYard?.title}} fontSize="xl" noOfLines={2} />
                     </Link>
                 </Box>
                 <Divider orientation="horizontal" borderColor="gray.200" />
@@ -33,10 +33,10 @@ const NewsWithChildren = memo(({title, data}) => {
                         {
                             data?.data?.list.map((list, index) => (
                                 <Link href={`${list.kanal.toLowerCase()}/${list.slug}`} key={index}>
-                                    <Grid gap={3}>
+                                    <Grid templateColumns="1fr 2fr" gap={3}>
                                         <Box flex="1">
                                             <Image 
-                                                src={list.main_photo}
+                                                src={list.main_photo ? list.main_photo : list.thumbnail}
                                                 priority
                                                 alt={list.title}
                                                 height={60}

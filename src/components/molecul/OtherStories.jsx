@@ -8,7 +8,7 @@ const OtherStories = memo(({data}) => {
     return (
         <Box flex="1">
             <RubrikTitle title="OTHER STORIES" />
-            <Grid templateColumns="1fr 20px 1fr 20px 1fr" mt="15px">
+            <Grid templateColumns={{md: "1fr 20px 1fr 20px 1fr", sm: "auto"}} mt="15px">
                 {
                     data?.map((list, index) => {
                         return (
@@ -26,7 +26,7 @@ const OtherStories = memo(({data}) => {
                                             width="350px"
                                             height="210px"
                                         />
-                                        <Text as="h2" dangerouslySetInnerHTML={{__html: list.title}} fontSize="xl" />
+                                        <Text as="h2" dangerouslySetInnerHTML={{__html: list.title}} fontSize="xl" noOfLines={2} />
                                     </a>
                                 </Link>
                             </Box>
