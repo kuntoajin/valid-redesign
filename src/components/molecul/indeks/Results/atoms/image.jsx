@@ -1,8 +1,10 @@
 import { memo } from "react";
 import Image from 'next/image'
-import { Box, Text } from "@chakra-ui/react";
+import { Box, useMediaQuery } from "@chakra-ui/react";
 
 const ImageComponent = memo(({data}) => {
+    const [isMobile] = useMediaQuery("(max-width: 768px)") 
+
     return (
         <Box>
             {
@@ -14,8 +16,8 @@ const ImageComponent = memo(({data}) => {
                     alt={data?.title}
                     priority
                     quality={3}
-                    width={200}
-                    height={120}
+                    width={isMobile ? 100 : 200}
+                    height={isMobile ? 60 : 120}
                 />
             }
         </Box>

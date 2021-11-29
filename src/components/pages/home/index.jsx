@@ -16,8 +16,8 @@ const Fokus = dynamic(() => import('../../molecul/Fokus'))
 const Survei = dynamic(() => import('../../molecul/Survei'))
 const Vista = dynamic(() => import('../../molecul/Vista'))
 const Visixty = dynamic(() => import('../../molecul/Visixty'))
-const Vistory = dynamic(() => import('../../molecul/Kultura'))
-const Vtalk = dynamic(() => import('../../molecul/Kultura'))
+const Vistory = dynamic(() => import('../../molecul/Vistory'))
+const Vtalk = dynamic(() => import('../../molecul/Vtalk'))
 
 const Home = () => {
     const data = apiGet('api/portal/home/topStories')

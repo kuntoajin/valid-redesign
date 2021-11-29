@@ -4,7 +4,7 @@ import { Box, Text } from "@chakra-ui/react";
 
 const ImageComponent = memo(({data}) => {
     return (
-        <Box p={5} pt={0}>
+        <Box p={{md: "10px", sm: "0"}} pt={0}>
             {
                 data?.largeYard && 
                 <Image 

@@ -22,7 +22,7 @@ const KulturaPage = memo(() => {
             <Divider />
             <OtherStories data={data?.data?.last_kultura} />
             <Divider />
-            <Grid templateColumns="1fr 20px 1fr 20px 1fr 20px 1fr" mt="15px">
+            <Grid templateColumns={{sm: "auto", md: "1fr 20px 1fr 20px 1fr 20px 1fr"}} mt="15px">
                 <Box>
                     <RubrikTitle title="GAYA HIDUP" />
                     <SubKanal data={data?.data?.gaya_hidup} />

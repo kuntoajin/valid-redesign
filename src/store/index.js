@@ -2,7 +2,11 @@ import create from 'zustand'
 
 export const useStore = create(set => ({
   isMenuOpen: false,
+  newsModalProps: {
+    url: "",
+    title: "",
+    lower: ""
+  },
   handleIsMenu: () => set(state => ({ isMenuOpen: !state.isMenuOpen })),
-  increasePopulation: () => set(state => ({ bears: state.bears + 1 })),
-  removeAllBears: () => set({ bears: 0 })
+  handleNewsModalProps: () => set(state => ({newsModalProps: state.newsModalProps}))
 }))

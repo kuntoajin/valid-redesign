@@ -22,7 +22,7 @@ const NasionalKanal = memo(() => {
             <Divider />
             <OtherStories data={data?.data?.last_nasional} />
             <Divider />
-            <Grid templateColumns="1fr 20px 1fr 20px 1fr 20px 1fr" mt="15px">
+            <Grid templateColumns={{sm: "auto", md: "1fr 20px 1fr 20px 1fr 20px 1fr"}} mt="15px">
                 <Box>
                     <RubrikTitle title="HUKUM" />
                     <SubKanal data={data?.data?.hukum} />

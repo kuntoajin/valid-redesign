@@ -9,8 +9,8 @@ const TerpopulerTerkini = dynamic(() => import('./atoms/terpopuler'))
 const Showcase = memo(({data, populer, title}) => {
     return (
         <Box>
-            <Grid templateColumns="3fr 20px 1fr">
-                <Grid templateColumns="1fr 2fr">
+            <Grid templateColumns={{sm: "auto", md: "3fr 20px 1fr"}}>
+                <Grid templateColumns={{sm: "auto", md: "1fr 2fr"}}>
                     <InfoComponent data={data} title={title} />
                     <ImageComponent data={data} />
                 </Grid>

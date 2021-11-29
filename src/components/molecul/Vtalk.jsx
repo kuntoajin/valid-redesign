@@ -1,12 +1,13 @@
-import dynamic from "next/dynamic";
 import { memo } from "react";
+import dynamic from "next/dynamic";
 import { apiGet } from "../../utils/api";
 
-const NewsWithChildren = dynamic(() => import("../atom/NewsWithChildren"))
+const NewsModal = dynamic(() => import("../atom/NewsModal"))
 
 const Vtalk = memo(() => {
     const data = apiGet('api/portal/home/vtalk')
-    return <NewsWithChildren title="VTALK" data={data} />
+    return <NewsModal title="VTALK" data={data} />
+
 })
 
 export default Vtalk

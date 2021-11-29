@@ -1,7 +1,7 @@
 import { memo } from "react";
 import dynamic from 'next/dynamic'
 import Link from 'next/link'
-import { Box, VStack, Divider, Grid } from "@chakra-ui/react";
+import { Box, VStack, Divider, Grid, Button } from "@chakra-ui/react";
 
 const ImageComponent = dynamic(() => import('./atoms/image'))
 const InfoComponent = dynamic(() => import('./atoms/info'))
@@ -14,7 +14,7 @@ const Results = memo(({data}) => {
                     data?.data?.map((list, index) => (
                         <Link href={`/${list.kanal.toLowerCase()}/${list.slug}`} key={index}>
                             <a>
-                                <Grid templateColumns="1fr 4fr" gap="3">
+                                <Grid templateColumns="auto 3fr" gap="3">
                                     <ImageComponent data={list} />
                                     <InfoComponent data={list} />
                                 </Grid>
@@ -23,6 +23,7 @@ const Results = memo(({data}) => {
                     ))
                 }
             </VStack>
+            <Button color="white" bg="orange" _hover={"unset"} fontFamily="Montserrat">Selanjutnya</Button>
         </Box>
     )
 })

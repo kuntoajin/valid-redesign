@@ -8,9 +8,9 @@ const Terpopuler = dynamic(() => import('../atoms/terpopuler'))
 const RightContent = memo((data) => {
     return (
         <Box>
-            <Infografis data={data.data.infografis.data} />
+            <Infografis data={data?.data?.infografis?.data} />
             <Divider orientation="horizontal"/>
-            <Terpopuler data={data.data.terpopuler} />
+            <Terpopuler data={data?.data?.terpopuler} />
         </Box>
     )
 })

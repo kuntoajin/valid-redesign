@@ -1,3 +1,4 @@
+import { memo } from "react";
 import dynamic from "next/dynamic"
 import { 
     Box, 
@@ -5,17 +6,25 @@ import {
     Flex, 
     Spacer, 
     Link,
-    Heading } from "@chakra-ui/react";
-import { memo } from "react";
+    Heading,
+    useMediaQuery,
+    Grid 
+} from "@chakra-ui/react";
 
 const MenuDrawer = dynamic(() => import('../atom/Menu'))
+const MenuDrawerMobile = dynamic(() => import('../mobile/atoms/Menu'))
 
 const Nav = memo(() => {
+    const [isMobile] = useMediaQuery("(max-width: 768px)") 
+
     return (
         <Box bg="#33424d" borderBottom="4px" borderBottomColor="orange">
             <Container maxW="container.lg" py="10px">
                 <Flex>
-                    <MenuDrawer />
+                    <Box>
+                        {!isMobile && <MenuDrawer />}
+                        {isMobile && <MenuDrawerMobile />}
+                    </Box>
                     <Spacer />
                     <Flex alignItems="center">
                         <Link href="/subscribe" color="white">

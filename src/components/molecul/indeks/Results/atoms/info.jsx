@@ -1,11 +1,16 @@
 import { memo } from "react";
-import { Text, Box, HStack, StackDivider } from "@chakra-ui/react";
+import Link from "next/link"
+import { Text, Box } from "@chakra-ui/react";
 
 const InfoComponent = memo(({data}) => {
     return (
         <Box>
-            <Text as="h2" fontSize="xl" dangerouslySetInnerHTML={{__html: data?.title}} />
-            <Text as="p" dangerouslySetInnerHTML={{__html: data?.lower_title}} />
+            <Link href={`/${data?.kanal?.toLowerCase()}/${data?.slug}`}>
+                <a>
+                    <Text as="h2" fontSize={{md: "xl", sm: "lg"}} dangerouslySetInnerHTML={{__html: data?.title}} noOfLines={2} />
+                    <Text as="p" fontSize="sm" dangerouslySetInnerHTML={{__html: data?.lower_title}} noOfLines={2} />
+                </a>
+            </Link>
         </Box>
     )
 })

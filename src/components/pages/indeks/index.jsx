@@ -1,7 +1,9 @@
 import { Container, Text } from "@chakra-ui/react"
+import dynamic from "next/dynamic"
 import { apiGet } from "../../../utils/api"
 import RubrikTitle from "../../atom/RubrikTitle"
-import Results from "../../molecul/indeks/Results"
+
+const Results = dynamic(() => import("../../molecul/indeks/Results"))
 
 const IndeksPage = ({ kanal }) => {
     const data = apiGet(`/api/portal/category/indeks/${kanal}`)
