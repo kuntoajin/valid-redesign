@@ -11,7 +11,7 @@ const Results = memo(({data}) => {
         <Box>
             <VStack divider={<Divider borderColor="gray.200" />} alignItems="flex-start">
                 {
-                    data?.data?.map((list, index) => (
+                    data?.data?.news?.map((list, index) => (
                         <Link href={`/${list.kanal.toLowerCase()}/${list.slug}`} key={index}>
                             <a>
                                 <Grid templateColumns="auto 3fr" gap="3">

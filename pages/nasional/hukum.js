@@ -1,5 +1,7 @@
+import SubKanalPage from "../../src/components/pages/subkanal";
+
 const Hukum = () => {
-  return "Opini indeks";
+  return <SubKanalPage subKanal="hukum" />
 };
 
 export default Hukum;

@@ -58,7 +58,7 @@ const Home = () => {
                 <OtherStories data={data?.data?.other_stories} />
             </Box>
             <Divider />
-            <Grid templateColumns="1fr 20px 1fr 20px 1fr" mt="15px">
+            <Grid templateColumns={{sm: "auto", md: "1fr 20px 1fr 20px 1fr"}} mt="15px">
                 <Nasional />
                 <Center>
                     <Divider orientation="vertical" />
@@ -70,7 +70,7 @@ const Home = () => {
                 <Kultura />
             </Grid>
             <Divider />
-            <Grid templateColumns="1fr 20px 1fr 20px 1fr" mt="15px">
+            <Grid templateColumns={{sm: "auto", md: "1fr 20px 1fr 20px 1fr"}} mt="15px">
                 <Fokus />
                 <Center>
                     <Divider orientation="vertical" />
@@ -82,7 +82,7 @@ const Home = () => {
                 <Vista />
             </Grid>
             <Divider />
-            <Grid templateColumns="1fr 20px 1fr 20px 1fr" mt="15px">
+            <Grid templateColumns={{sm: "auto", md: "1fr 20px 1fr 20px 1fr"}} mt="15px">
                 <Visixty />
                 <Center>
                     <Divider orientation="vertical" />

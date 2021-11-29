@@ -1,5 +1,7 @@
+import SubKanalPage from "../../src/components/pages/subkanal";
+
 const Vista = () => {
-  return "Opini indeks";
+  return <SubKanalPage subKanal="vista" />
 };
 
 export default Vista;

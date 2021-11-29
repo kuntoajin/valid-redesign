@@ -1,5 +1,7 @@
+import SubKanalPage from "../../src/components/pages/subkanal";
+
 const Tekno = () => {
-  return "Opini indeks";
+  return <SubKanalPage subKanal="teknologi-otomotif" />
 };
 
 export default Tekno;

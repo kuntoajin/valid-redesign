@@ -1,5 +1,7 @@
+import SubKanalPage from "../../src/components/pages/subkanal";
+
 const Oase = () => {
-  return "Opini indeks";
+  return <SubKanalPage subKanal="oase" />
 };
 
 export default Oase;

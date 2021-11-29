@@ -1,5 +1,7 @@
+import SubKanalPage from "../../src/components/pages/subkanal";
+
 const Kesra = () => {
-  return "Opini indeks";
+  return <SubKanalPage subKanal="kesra" />
 };
 
 export default Kesra;
