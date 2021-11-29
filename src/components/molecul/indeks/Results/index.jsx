@@ -7,11 +7,12 @@ const ImageComponent = dynamic(() => import('./atoms/image'))
 const InfoComponent = dynamic(() => import('./atoms/info'))
 
 const Results = memo(({data}) => {
+    console.log(data)
     return (
         <Box>
             <VStack divider={<Divider borderColor="gray.200" />} alignItems="flex-start">
                 {
-                    data?.data?.news?.map((list, index) => (
+                    data?.data?.map((list, index) => (
                         <Link href={`/${list.kanal.toLowerCase()}/${list.slug}`} key={index}>
                             <a>
                                 <Grid templateColumns="auto 3fr" gap="3">

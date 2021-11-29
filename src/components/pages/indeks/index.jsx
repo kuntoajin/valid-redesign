@@ -5,11 +5,11 @@ import RubrikTitle from "../../atom/RubrikTitle"
 
 const Results = dynamic(() => import("../../molecul/indeks/Results"))
 
-const IndeksPage = ({ kanal }) => {
-    const data = apiGet(`/api/portal/category/indeks/${kanal}`)
+const IndeksPage = ({ kanal, title }) => {
+    const data = apiGet(`/api/portal/category/${kanal}`)
     return (
         <Container maxW="container.lg">
-            <Text>{kanal[0].toUpperCase() + kanal.substring(1)}</Text>
+            <Text>{title}</Text>
             <RubrikTitle title="INDEKS" />
             <Results data={data} />
         </Container>

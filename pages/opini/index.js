@@ -1,5 +1,7 @@
+import OpiniKanal from "../../src/components/pages/kanal/opini";
+
 const Opini = () => {
-  return "Opini indeks";
+  return <OpiniKanal />
 };
 
 export default Opini;
