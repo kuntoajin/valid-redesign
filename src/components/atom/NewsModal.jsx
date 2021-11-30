@@ -33,12 +33,12 @@ const NewsModal = memo(({title, data}) => {
                             {
                                 photo && 
                                 <Image
-                                src={photo}
-                                priority
-                                alt={data?.data?.largeYard?.title}
-                                width="350px"
-                                height="210px"
-                                quality={5}
+                                    src={photo}
+                                    priority
+                                    alt={data?.data?.largeYard?.title}
+                                    width="350px"
+                                    height="210px"
+                                    quality={5}
                                 />
                             }
                         </Box>
