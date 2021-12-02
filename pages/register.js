@@ -1,5 +1,5 @@
-const Register = () => {
-  return "Opini indeks";
-};
+import RegisterPage from "../src/components/pages/register";
+
+const Register = () => <RegisterPage />;
 
 export default Register;
