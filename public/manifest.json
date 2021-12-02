@@ -3,7 +3,7 @@
   "name": "Validnews.id",
   "short_name": "Validnews",
   "theme_color": "#ffffff",
-  "background_color": "#fffff",
+  "background_color": "#ffffff",
   "display": "fullscreen",
   "orientation": "portrait",
   "scope": "/",

@@ -5,6 +5,11 @@ module.exports = withPWA({
   pwa: {
     dest: "public",
     runtimeCaching,
+    register: true,
+    scope: '/',
+    sw: 'service-worker.js',
+
+    buildExcludes: [/middleware-manifest\.json$/]
   },
   images: {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
