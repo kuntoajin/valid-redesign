@@ -11,17 +11,20 @@ import {
     Flex,
     Center
   } from '@chakra-ui/react'
+import axios from "axios";
 
 const RegisterPage = () => {
     const { register, handleSubmit, watch, formState: { errors, isSubmitting } } = useForm()
+    const url = process.env.NEXT_PUBLIC_URL
 
-    const onSubmit = (values) => {
-        return new Promise((resolve) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2))
-            resolve()
-          }, 3000)
-        })
+    const onSubmit = async (values) => {
+        // return new Promise((resolve) => {
+        //   setTimeout(() => {
+        //       resolve()
+        //     }, 3000)
+        // })
+        const response = await axios.post(url, values)
+        console.log(response)
       }
 
     return(
@@ -42,11 +45,11 @@ const RegisterPage = () => {
                         </FormErrorMessage>
                     </FormControl>
                     <FormControl isInvalid={errors.noTelp} w={[300, 400, 500]}>
-                        <FormLabel htmlFor='noTelp'>No. Telepon:</FormLabel>
+                        <FormLabel htmlFor='no_hp'>No. Telepon:</FormLabel>
                         <Input
-                            id='noTelp'
+                            id='no_hp'
                             placeholder='08123456789'
-                            {...register('noTelp', {
+                            {...register('no_hp', {
                                 required: 'No Telp harus diisi',
                             })}
                         />
@@ -63,9 +66,8 @@ const RegisterPage = () => {
                                 required: "Pilih jenis kelamin"
                             })}
                         >
-                            <option value='option1'>Option 1</option>
-                            <option value='option2'>Option 2</option>
-                            <option value='option3'>Option 3</option>
+                            <option value='1'>Laki-laki</option>
+                            <option value='2'>Perempuan</option>
                         </Select>
                         <FormErrorMessage>
                             {errors.gender && errors.gender.message}
@@ -75,6 +77,7 @@ const RegisterPage = () => {
                         <FormLabel htmlFor='password'>Password:</FormLabel>
                         <Input
                             id='password'
+                            type="password"
                             placeholder='password'
                             {...register('password', {
                                 required: 'Password harus diisi',
@@ -87,9 +90,10 @@ const RegisterPage = () => {
                     <FormControl isInvalid={errors.confirmPassword} w={[300, 400, 500]}>
                         <FormLabel htmlFor='confirmPassword'>Konfirmasi Password:</FormLabel>
                         <Input
-                            id='confirmPassword'
+                            id='password_confirmation'
+                            type="password"
                             placeholder='Konfirmasi password'
-                            {...register('confirmPassword', {
+                            {...register('password_confirmation', {
                                 required: 'Konfirmasi password Anda',
                             })}
                         />
