@@ -8,7 +8,6 @@ module.exports = withPWA({
     register: true,
     scope: '/',
     sw: 'service-worker.js',
-
     buildExcludes: [/middleware-manifest\.json$/]
   },
   images: {

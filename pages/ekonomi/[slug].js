@@ -1,8 +1,6 @@
 import DetailComponents from "../../src/components/pages/detail"
 
-const Detail = ({ data, infografis, terpopuler }) => {
-    return <DetailComponents data={data} infografis={infografis} terpopuler={terpopuler} />
-}
+const Detail = ({ data, infografis, terpopuler }) => <DetailComponents data={data} infografis={infografis} terpopuler={terpopuler} />
 
 export async function getServerSideProps(ctx) {
     const slug = ctx.query.slug
