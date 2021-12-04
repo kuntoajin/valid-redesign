@@ -2,8 +2,8 @@ import { Container, Grid, Divider, Center, Box, useMediaQuery } from "@chakra-ui
 import Seo from './utils/seo'
 import dynamic from 'next/dynamic'
 
-const LeftContent = dynamic(() => import('../../molecul/detailInfografis/molecules/LeftContent'))
-const RightContent = dynamic(() => import('../../molecul/detailInfografis/molecules/RightContent'))
+const LeftContent = dynamic(() => import('../../molecules/detailInfografis/molecules/LeftContent'))
+const RightContent = dynamic(() => import('../../molecules/detailInfografis/molecules/RightContent'))
 
 const DetailComponents = ({ data, infografis, terpopuler }) => {
     const [isMobile] = useMediaQuery("(max-width: 768px)") 

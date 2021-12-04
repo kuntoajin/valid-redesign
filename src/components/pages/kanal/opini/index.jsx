@@ -2,8 +2,8 @@ import { memo } from "react"
 import { Container, Grid } from "@chakra-ui/react"
 import { apiGet } from "../../../../utils/api"
 import Seo from "../utils/seo"
-import LeftContent from "../../../molecul/kanal/opini/molecules/LeftContent"
-import RightContent from "../../../molecul/kanal/opini/molecules/RightContent"
+import LeftContent from "../../../molecules/kanal/opini/molecules/LeftContent"
+import RightContent from "../../../molecules/kanal/opini/molecules/RightContent"
 
 const OpiniKanal = memo(() => {
     const data = apiGet('/api/portal/category/opini')

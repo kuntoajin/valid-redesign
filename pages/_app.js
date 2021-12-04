@@ -1,5 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react"
-// import Header from '../src/components/molecul/Header'
+// import Header from '../src/components/molecules/Header'
 import theme from "../theme"
 import dynamic from 'next/dynamic'
 import { Global, css } from '@emotion/react'
@@ -18,9 +18,9 @@ import "@fontsource/montserrat/500.css"
 
 import 'focus-visible/dist/focus-visible'
 
-const Header = dynamic(() => import('../src/components/molecul/Header'))
-const Nav = dynamic(() => import('../src/components/molecul/Nav'))
-const Footer = dynamic(() => import('../src/components/molecul/Footer'))
+const Header = dynamic(() => import('../src/components/molecules/Header'))
+const Nav = dynamic(() => import('../src/components/molecules/Nav'))
+const Footer = dynamic(() => import('../src/components/molecules/Footer'))
 
 const GlobalStyles = css`
   .js-focus-visible :focus:not([data-focus-visible-added]) {

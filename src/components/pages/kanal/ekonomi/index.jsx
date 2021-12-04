@@ -1,9 +1,9 @@
 import { Container, Divider } from "@chakra-ui/react";
 import { memo } from "react";
-import Showcase from "../../../molecul/kanal/Showcase";
+import Showcase from "../../../molecules/kanal/Showcase";
 import Seo from "../utils/seo";
 import { apiGet } from "../../../../utils/api";
-import OtherStories from "../../../molecul/kanal/OtherStories";
+import OtherStories from "../../../molecules/kanal/OtherStories";
 
 const EkonomiKanal = memo(() => {
     const data = apiGet('/api/portal/category/ekonomi')
