@@ -15,7 +15,12 @@ export async function getServerSideProps(ctx) {
     const infografis = await responseInfografis.json()
     const terpopuler = await responseTerpopuler.json()
 
-    // Pass data to the page via props
+    if(!data.data) {
+      return {
+        notFound: true,
+      }
+    }  
+    
     return { props: { data, infografis, terpopuler } }
   }
 
