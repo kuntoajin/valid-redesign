@@ -7,7 +7,6 @@ const RightContent = dynamic(() => import('../../molecules/detailInfografis/mole
 
 const DetailComponents = ({ data, infografis, terpopuler }) => {
     const [isMobile] = useMediaQuery("(max-width: 768px)") 
-    console.log(data)
     return (
         <Container maxW="container.lg">
             <Seo

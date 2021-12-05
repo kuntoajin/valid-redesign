@@ -11,7 +11,6 @@ const SubKanal = dynamic(() => import("../../../molecules/kanal/SubKanal"))
 
 const TerkiniPage = memo(() => {
     const data = apiGet('/api/portal/category/terkini')
-    console.log(data?.data?.last_terkini)
     return ( 
         <Container maxW="container.lg">
             <Seo 

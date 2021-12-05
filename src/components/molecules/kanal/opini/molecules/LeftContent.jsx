@@ -1,8 +1,10 @@
 import { memo } from "react";
-import { Box, Grid } from "@chakra-ui/react";
+import dynamic from "next/dynamic";
+import { Box, Divider, Grid, HStack, StackDivider } from "@chakra-ui/react";
 
-import InfoComponent from "../../Showcase/atoms/info";
-import ImageComponent from "../../Showcase/atoms/image";
+const InfoComponent = dynamic(() => import("../atoms/info"))
+const ImageComponent = dynamic(() => import("../atoms/image"))
+const SubKanal = dynamic(() => import("../atoms/subKanal"))
 
 const LeftContent = memo(({data, title}) => {
     return (
@@ -11,6 +13,11 @@ const LeftContent = memo(({data, title}) => {
                 <InfoComponent data={data?.data?.last_opini} title={title} />
                 <ImageComponent data={data?.data?.last_opini} />
             </Grid>
+            <Divider orientation="horizontal" />
+            <HStack divider={<StackDivider />} alignItems="flex-start">
+                <SubKanal title="FOKUS" data={data?.data?.fokus} />
+                <SubKanal title="SURVEI" data={data?.data?.paradigma} />
+            </HStack>
         </Box>
     )
 })

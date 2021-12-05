@@ -5,7 +5,6 @@ import { Center, Box, Divider, Text, Grid } from "@chakra-ui/react";
 import RubrikTitle from "../../../../atom/RubrikTitle";
 
 const InfografisTerpopuler = memo(({data}) => {
-    console.log(data)
     return (
         <Box>
             <RubrikTitle title="INFOGRAFIS TERPOPULER" />

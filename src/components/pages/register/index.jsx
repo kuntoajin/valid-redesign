@@ -24,7 +24,6 @@ const RegisterPage = () => {
         //     }, 3000)
         // })
         const response = await axios.post(url, values)
-        console.log(response)
       }
 
     return(

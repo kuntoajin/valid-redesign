@@ -7,7 +7,6 @@ import { apiGet } from "../../../../../utils/api";
 
 const InfografisLainnya = memo(() => {
     const data = apiGet('/api/portal/category/infografis')
-    console.log(data)
 
     return (
         <Box>
