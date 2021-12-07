@@ -41,11 +41,11 @@ const TopStories = memo(() => {
                                 <Image 
                                     placeholder="blur"
                                     blurDataURL
-<<<<<<< HEAD:src/components/mobile/molecul/TopStories.jsx
+<<<<<<< HEAD:src/components/mobile/molecules/TopStories.jsx
                                     // loader={() => loader(data, list.main_photo)}
 =======
                                     loader={() => list.main_photo}
->>>>>>> 744dc3d9fe67e2fd731b6173a6879c9c5a7163f7:src/mobile/molecul/TopStories.jsx
+>>>>>>> 744dc3d9fe67e2fd731b6173a6879c9c5a7163f7:src/mobile/molecules/TopStories.jsx
                                     src={list.main_photo} 
                                     alt={list.title} 
                                     index={index} 

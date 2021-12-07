@@ -1,6 +1,6 @@
 import { Container } from "@chakra-ui/react"
-import TerkiniMobile from "../molecul/Terkini"
-import TopStories from "../molecul/TopStories"
+import TerkiniMobile from "../molecules/Terkini"
+import TopStories from "../molecules/TopStories"
 
 const HomeMobile = () => {
     return (

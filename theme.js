@@ -17,7 +17,8 @@ const theme = extendTheme({
   },
   colors: {
     dark: "#33424d",
-    orange: "#e56e21"
+    orange: "#e56e21",
+    brown: "#8d5512"
   },
  })
 

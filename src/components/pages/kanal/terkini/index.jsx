@@ -5,13 +5,12 @@ import { apiGet } from "../../../../utils/api";
 import RubrikTitle from "../../../atom/RubrikTitle";
 import dynamic from "next/dynamic";
 
-const Showcase = dynamic(() => import("../../../molecul/kanal/Showcase"))
-const OtherStories = dynamic(() => import("../../../molecul/kanal/OtherStories"))
-const SubKanal = dynamic(() => import("../../../molecul/kanal/SubKanal"))
+const Showcase = dynamic(() => import("../../../molecules/kanal/Showcase"))
+const OtherStories = dynamic(() => import("../../../molecules/kanal/OtherStories"))
+const SubKanal = dynamic(() => import("../../../molecules/kanal/SubKanal"))
 
 const TerkiniPage = memo(() => {
     const data = apiGet('/api/portal/category/terkini')
-    console.log(data?.data?.last_terkini)
     return ( 
         <Container maxW="container.lg">
             <Seo 

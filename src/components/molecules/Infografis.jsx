@@ -1,5 +1,6 @@
 import { memo } from "react";
 import Image from 'next/image'
+import Link from 'next/link'
 import { Box, Text } from "@chakra-ui/react";
 import { apiGet } from "../../utils/api";
 import RubrikTitle from "../atom/RubrikTitle";
@@ -23,7 +24,11 @@ const Infografis = memo(() => {
                     quality={8}
                 />
             }
-            <Text as="h2" fontSize="sm" dangerouslySetInnerHTML={{__html: data?.data?.largeYard?.title}} />
+            <Link href={`/${data?.data?.largeYard?.kanal?.toLowerCase()}/${data?.data?.largeYard?.slug}`}>
+                <a>
+                    <Text as="h2" fontSize="sm" dangerouslySetInnerHTML={{__html: data?.data?.largeYard?.title}} />
+                </a>
+            </Link>
         </Box>
     )
 })
