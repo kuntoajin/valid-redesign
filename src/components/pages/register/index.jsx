@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import { useRouter } from 'next/router'
 import {
     Container,
     FormErrorMessage,
@@ -9,39 +10,62 @@ import {
     Select,
     Textarea,
     Flex,
-    Center
+    useToast
   } from '@chakra-ui/react'
 import axios from "axios";
 
 const RegisterPage = () => {
     const { register, handleSubmit, watch, formState: { errors, isSubmitting } } = useForm()
+    const router = useRouter()
+    const toast = useToast()
     const url = process.env.NEXT_PUBLIC_URL
 
     const onSubmit = async (values) => {
-        // return new Promise((resolve) => {
-        //   setTimeout(() => {
-        //       resolve()
-        //     }, 3000)
-        // })
-        const response = await axios.post(url, values)
-        console.log(response)
+        return new Promise((resolve) => {
+          setTimeout(() => {
+              try {
+                  const dataFetch = async () => {
+                      const response = await axios.post(`${url}/api/portal/register`, values, {headers: {"Access-Control-Allow-Origin": "*"}})
+                      console.log(response.data.success)
+                  } 
+                dataFetch()
+              } catch (error) {
+                  console.log(error)
+              }
+              resolve()
+            }, 3000)
+        })
       }
 
     return(
         <Container maxW="container.lg" h={{md: "69vh", sm: "auto"}}>
             <Flex justifyContent="center">
                 <form onSubmit={handleSubmit(onSubmit)}>
-                    <FormControl isInvalid={errors.name} w={[300, 400, 500]}>
-                        <FormLabel htmlFor='name'>Nama Anda:</FormLabel>
+                    <FormControl isInvalid={errors.fullname} w={[300, 400, 500]}>
+                        <FormLabel htmlFor='fullname'>Nama Anda:</FormLabel>
                         <Input
-                            id='name'
+                            id='fullname'
                             placeholder='Nama Anda'
-                            {...register('name', {
+                            {...register('fullname', {
                                 required: 'Nama harus diisi',
                             })}
                         />
                         <FormErrorMessage>
-                        {errors.name && errors.name.message}
+                            {errors.fullname && errors.fullname.message}
+                        </FormErrorMessage>
+                    </FormControl>
+                    <FormControl isInvalid={errors.email} w={[300, 400, 500]}>
+                        <FormLabel htmlFor='email'>Email Anda:</FormLabel>
+                        <Input
+                            id='email'
+                            type="email"
+                            placeholder='Nama Anda'
+                            {...register('email', {
+                                required: 'Nama harus diisi',
+                            })}
+                        />
+                        <FormErrorMessage>
+                            {errors.email && errors.email.message}
                         </FormErrorMessage>
                     </FormControl>
                     <FormControl isInvalid={errors.noTelp} w={[300, 400, 500]}>
