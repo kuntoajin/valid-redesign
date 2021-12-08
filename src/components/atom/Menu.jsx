@@ -113,14 +113,14 @@ const MenuDrawer = memo(() => {
                 <Grid templateColumns="repeat(4, 1fr)">
                     <GridItem>
                         <MenuItem _hover={{ bg: "unset" }} _focus={{ bg: "unset" }}>
-                            <Link href="/infografis" fontFamily="Montserrat" fontWeight="700" color="orange">
+                            <Link href="/about#redaksi" fontFamily="Montserrat" fontWeight="700" color="orange">
                                 Redaksi
                             </Link>
                         </MenuItem>
                     </GridItem>
                     <GridItem>
                         <MenuItem _hover={{ bg: "unset" }} _focus={{ bg: "unset" }}>
-                            <Link href="/infografis" fontFamily="Montserrat" fontWeight="700" color="orange">
+                            <Link href="/about#kontak" fontFamily="Montserrat" fontWeight="700" color="orange">
                                 Kontak
                             </Link>
                         </MenuItem>
