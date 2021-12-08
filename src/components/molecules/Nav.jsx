@@ -8,7 +8,6 @@ import {
     Link,
     Heading,
     useMediaQuery,
-    Grid 
 } from "@chakra-ui/react";
 
 const MenuDrawer = dynamic(() => import('../atom/Menu'))
