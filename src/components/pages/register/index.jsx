@@ -59,9 +59,9 @@ const RegisterPage = () => {
                         <Input
                             id='email'
                             type="email"
-                            placeholder='Nama Anda'
+                            placeholder='Email Anda'
                             {...register('email', {
-                                required: 'Nama harus diisi',
+                                required: 'Email harus diisi',
                             })}
                         />
                         <FormErrorMessage>
@@ -138,8 +138,8 @@ const RegisterPage = () => {
                         {errors.address && errors.address.message}
                         </FormErrorMessage>
                     </FormControl>
-                    <Button mt={4} colorScheme='teal' isLoading={isSubmitting} type='submit'>
-                        Submit
+                    <Button mt={4} bg="orange" color="white" isLoading={isSubmitting} type='submit'>
+                        Daftar
                     </Button>
                 </form>
             </Flex>

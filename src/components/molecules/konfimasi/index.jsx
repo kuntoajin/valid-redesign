@@ -9,11 +9,10 @@ const Konfirmasi = () => {
     useEffect(() => {
         const dataFetch = async () => {
             const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/portal/konfirmasi/${router.query.detail}`)
-            console.log(response)
         }
         dataFetch()
 
-        setTimeout(() => router.push('/login'), 3000)
+        // setTimeout(() => router.push('/login'), 3000)
     })
 
     return (

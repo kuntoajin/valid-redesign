@@ -8,5 +8,7 @@ export const useStore = create(set => ({
     lower: ""
   },
   handleIsMenu: () => set(state => ({ isMenuOpen: !state.isMenuOpen })),
-  handleNewsModalProps: () => set(state => ({newsModalProps: state.newsModalProps}))
+  handleNewsModalProps: () => set(state => ({newsModalProps: state.newsModalProps})),
+  news: "Berita",
+  handleNewsFilter: (replaceNews) => set(state => ({news: replaceNews}))
 }))

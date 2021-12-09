@@ -1,5 +1,3 @@
-import KonfirmasiPage from "../../src/components/pages/konfirmasi";
+const Konfirmasi = () => "cek email"
 
-const KonfirmasiDetail = () => <KonfirmasiPage />
-
-export default KonfirmasiDetail;
+export default Konfirmasi

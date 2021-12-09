@@ -1,13 +1,16 @@
 import { memo } from "react";
-import { HamburgerIcon } from "@chakra-ui/icons";
+import { HamburgerIcon, SearchIcon } from "@chakra-ui/icons";
 import { Menu, MenuButton, MenuList, MenuItem, Grid, GridItem, Heading, Link, Box, Divider } from "@chakra-ui/react";
+import { useRouter } from "next/router";
 
 const MenuDrawer = memo(() => {
+    const router = useRouter()
     return (
         <Menu isLazy>
             <MenuButton bg="dark">
                 <HamburgerIcon color="white" w={9} h={9} />
             </MenuButton>
+            <SearchIcon color="white" w={7} h={7} onClick={() => router.push("/search")} _hover={{cursor: "pointer"}} ml="10px" />
             <MenuList bg="dark" color="white">
                 <Heading as="p" ml={3} fontSize="xl">RUBRIK</Heading>
                 <Grid templateColumns="repeat(4, 1fr)">

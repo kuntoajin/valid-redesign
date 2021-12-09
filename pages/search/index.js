@@ -1,8 +1,7 @@
-import { Box } from "@chakra-ui/layout";
-import { useEffect } from "react";
+import dynamic from "next/dynamic"
 
-const Search = () => {
-  return <Box></Box>;
-};
+const SearchPage = dynamic(() => import("../../src/components/pages/search"))
+
+const Search = () => <SearchPage />
 
 export default Search;
